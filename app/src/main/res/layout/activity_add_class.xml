@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_class"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.galaxyvibesdreams.www.classschedule.AddClassActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:inputType="textCapSentences"
+            android:textColor="@color/colorBlack" />
+
+        <EditText
+            android:id="@+id/etInstitute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Institute"
+            android:inputType="textCapSentences"
+            android:textColor="@color/colorBlack" />
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Room No."
+            android:inputType="textCapSentences"
+            android:textColor="@color/colorBlack" />
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:id="@+id/etStrartTime"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:focusable="false"
+                android:hint="Strat Time"
+                android:onClick="pickTime"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorBlack" />
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:id="@+id/etEndTime"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:focusable="false"
+                android:hint="End Time"
+                android:onClick="pickEndTime"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorBlack" />
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/etNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="start"
+            android:hint="Note"
+            android:inputType="textCapSentences"
+            android:textColor="@color/colorBlack" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:layout_marginTop="60dp"
+            android:textColor="@color/colorGray"
+            android:text="Class Days"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLightGray"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbEvery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Everyday"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/cbMon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Monday"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+                <CheckBox
+                    android:id="@+id/cbWed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wednesday"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+                <CheckBox
+                    android:id="@+id/cbFri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Friday"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbSun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sunday"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/cbTue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tuesday"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/cbThr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thursday"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+                <CheckBox
+                    android:id="@+id/cbSat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saturday"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
