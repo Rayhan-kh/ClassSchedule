@@ -1,4 +1,4 @@
-package com.galaxyvibesdreams.www.classschedule;
+package com.foxcoders.classschedule;
 
 import org.junit.Test;
 

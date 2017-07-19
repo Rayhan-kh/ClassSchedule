@@ -1,4 +1,4 @@
-package com.galaxyvibesdreams.www.classschedule.Adapters;
+package com.foxcoders.classschedule.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.galaxyvibesdreams.www.classschedule.Pojo.ClassData;
-import com.galaxyvibesdreams.www.classschedule.R;
+import com.foxcoders.classschedule.Pojo.ClassData;
+import com.foxcoders.classschedule.R;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

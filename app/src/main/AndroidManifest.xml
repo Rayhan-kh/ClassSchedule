@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.galaxyvibesdreams.www.classschedule">
+    package="com.foxcoders.classschedule">
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/n"
+        android:icon="@drawable/calendar"
         android:label="@string/app_name"
+        android:roundIcon="@drawable/calendar_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.galaxyvibesdreams.www.classschedule.MainActivity">
+        <activity android:name="com.foxcoders.classschedule.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.galaxyvibesdreams.www.classschedule.AddClassActivity" />
-        <activity android:name="com.galaxyvibesdreams.www.classschedule.DetailViewClass"
-            android:parentActivityName="com.galaxyvibesdreams.www.classschedule.MainActivity"/>
+        <activity
+            android:name="com.foxcoders.classschedule.AddClassActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name="com.foxcoders.classschedule.DetailViewClass"
+            android:parentActivityName="com.foxcoders.classschedule.MainActivity" />
     </application>
 
 </manifest>

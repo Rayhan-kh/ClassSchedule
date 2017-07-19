@@ -1,4 +1,4 @@
-package com.galaxyvibesdreams.www.classschedule.Pojo;
+package com.foxcoders.classschedule.Pojo;
 
 /**
  * Created by Ray on 1/27/2017.

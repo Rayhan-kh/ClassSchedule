@@ -1,4 +1,4 @@
-package com.galaxyvibesdreams.www.classschedule;
+package com.foxcoders.classschedule;
 
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
@@ -14,8 +14,8 @@ import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.galaxyvibesdreams.www.classschedule.Database.DatabaseManager;
-import com.galaxyvibesdreams.www.classschedule.Pojo.ClassData;
+import com.foxcoders.classschedule.Database.DatabaseManager;
+import com.foxcoders.classschedule.Pojo.ClassData;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -70,6 +70,8 @@ public class AddClassActivity extends AppCompatActivity {
         cbEvery.setChecked(true);
 
         dbManager = new DatabaseManager(this);
+        getSupportActionBar().setTitle("Add Schedule");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
     }

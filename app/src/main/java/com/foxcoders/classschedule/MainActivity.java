@@ -1,4 +1,4 @@
-package com.galaxyvibesdreams.www.classschedule;
+package com.foxcoders.classschedule;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.galaxyvibesdreams.www.classschedule.Adapters.MainListAdapter;
-import com.galaxyvibesdreams.www.classschedule.Database.DatabaseManager;
+import com.foxcoders.classschedule.Adapters.MainListAdapter;
+import com.foxcoders.classschedule.Database.DatabaseManager;
 
 import java.util.Calendar;
 
@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //initialize view
 
         tvDay = (TextView) findViewById(R.id.tvDay);

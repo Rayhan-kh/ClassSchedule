@@ -1,11 +1,11 @@
-package com.galaxyvibesdreams.www.classschedule.Database;
+package com.foxcoders.classschedule.Database;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.galaxyvibesdreams.www.classschedule.Pojo.ClassData;
+import com.foxcoders.classschedule.Pojo.ClassData;
 
 import java.util.ArrayList;
 

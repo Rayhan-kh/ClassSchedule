@@ -1,4 +1,4 @@
-package com.galaxyvibesdreams.www.classschedule;
+package com.foxcoders.classschedule;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

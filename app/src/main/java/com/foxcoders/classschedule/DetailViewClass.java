@@ -1,12 +1,12 @@
-package com.galaxyvibesdreams.www.classschedule;
+package com.foxcoders.classschedule;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.galaxyvibesdreams.www.classschedule.Database.DatabaseManager;
-import com.galaxyvibesdreams.www.classschedule.Pojo.ClassData;
+import com.foxcoders.classschedule.Database.DatabaseManager;
+import com.foxcoders.classschedule.Pojo.ClassData;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

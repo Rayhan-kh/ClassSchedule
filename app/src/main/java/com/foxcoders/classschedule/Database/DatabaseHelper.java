@@ -1,4 +1,4 @@
-package com.galaxyvibesdreams.www.classschedule.Database;
+package com.foxcoders.classschedule.Database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
