@@ -1,7 +1,10 @@
 package com.foxcoders.classschedule;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +18,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.foxcoders.classschedule.Database.DatabaseManager;
+import com.foxcoders.classschedule.Database.SharedPreferencesManager;
 import com.foxcoders.classschedule.Pojo.ClassData;
 
 import java.text.DateFormat;
@@ -42,6 +46,8 @@ public class AddClassActivity extends AppCompatActivity {
     private String timeInMillis2;
     private Calendar myCalendar;
     private DatabaseManager dbManager;
+    private String alarmTime;
+    private Calendar calendar = Calendar.getInstance();
 
 
     @Override
@@ -50,13 +56,13 @@ public class AddClassActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_class);
 
         //Initial View Items
-        timeInMillis2=" ";
+        timeInMillis2 = " ";
         etTitle = (EditText) findViewById(R.id.etTitle);
         etInstitute = (EditText) findViewById(R.id.etInstitute);
         etLocation = (EditText) findViewById(R.id.etLocation);
         etStratTime = (EditText) findViewById(R.id.etStrartTime);
         etNote = (EditText) findViewById(R.id.etNote);
-        etEndTime=(EditText)findViewById(R.id.etEndTime);
+        etEndTime = (EditText) findViewById(R.id.etEndTime);
 
         cbSat = (CheckBox) findViewById(R.id.cbSat);
         cbSun = (CheckBox) findViewById(R.id.cbSun);
@@ -222,10 +228,43 @@ public class AddClassActivity extends AppCompatActivity {
 
                 }
                 Toast.makeText(this, "Class Schedule Added.", Toast.LENGTH_SHORT).show();
-                finish();
 
-            }
-            else {
+
+                SharedPreferencesManager preferencesManager = new SharedPreferencesManager(this);
+                if (preferencesManager.getWillGetNotification()) {
+
+                } else {
+                    AlertDialog.Builder alertDialBuilder = new AlertDialog.Builder(this);
+                    alertDialBuilder.setTitle("Notification")
+                            .setMessage("Click Yes if you want to get notification at you class time.")
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    final Calendar curTime = Calendar.getInstance();
+                                    int id = (int) curTime.getTimeInMillis();
+                                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                                    calendar.add(Calendar.MINUTE, 1);
+
+                                    Intent intent = new Intent(AddClassActivity.this, AlarmHandler.class);
+                                    intent.putExtra("alarmTime", calendar.getTimeInMillis());
+                                    PendingIntent pendingIntent = PendingIntent.getBroadcast(AddClassActivity.this, id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                                    if (alarmManager != null) {
+                                        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+                                    }
+
+                                    finish();
+                                }
+                            }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    });
+                    alertDialBuilder.show();
+                }
+
+
+            } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setIcon(R.mipmap.ic_launcher)
                         .setTitle("ooops!")
@@ -253,10 +292,10 @@ public class AddClassActivity extends AppCompatActivity {
             public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
 
                 DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
-                    calendar.set(Calendar.HOUR_OF_DAY, selectedHour);
-                    calendar.set(Calendar.MINUTE, selectedMinute);
-                    etStratTime.setText(dateFormat.format(calendar.getTime()));
-                    timeInMillis = String.valueOf(calendar.getTimeInMillis());
+                calendar.set(Calendar.HOUR_OF_DAY, selectedHour);
+                calendar.set(Calendar.MINUTE, selectedMinute);
+                etStratTime.setText(dateFormat.format(calendar.getTime()));
+                timeInMillis = String.valueOf(calendar.getTimeInMillis());
 
 
             }
@@ -264,6 +303,7 @@ public class AddClassActivity extends AppCompatActivity {
         mTimePicker.setTitle("Select Time");
         mTimePicker.show();
     }
+
     public void pickEndTime(final View view) {
 
         final Calendar mcalendar = Calendar.getInstance();
@@ -278,7 +318,6 @@ public class AddClassActivity extends AppCompatActivity {
                 mcalendar.set(Calendar.HOUR_OF_DAY, selectedHour);
                 mcalendar.set(Calendar.MINUTE, selectedMinute);
                 etEndTime.setText(dateFormat.format(mcalendar.getTime()));
-
 
 
             }
