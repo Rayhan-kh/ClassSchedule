@@ -194,8 +194,9 @@ public class DatabaseManager {
                 String taskInstitute = cursor.getString(cursor.getColumnIndex(DatabaseHelper.CLASS_INSTITUTE));
                 String taskNote = cursor.getString(cursor.getColumnIndex(DatabaseHelper.CLASS_NOTE));
                 String endTime = cursor.getString(cursor.getColumnIndex(DatabaseHelper.END_TIME));
+                String endTime2 = cursor.getString(cursor.getColumnIndex(DatabaseHelper.END_TIME2));
 
-                ClassData classData = new ClassData(classId, taskTitle, taskInstitute, taskLocation, taskTime, endTime, taskNote, taskDate);
+                ClassData classData = new ClassData(classId, taskTitle, taskInstitute, taskLocation, taskTime, endTime, endTime2, taskNote, taskDate);
                 classesOfTheDay.add(classData);
 
                 cursor.moveToNext();
@@ -228,8 +229,9 @@ public class DatabaseManager {
                 String taskInstitute = cursor.getString(cursor.getColumnIndex(DatabaseHelper.CLASS_INSTITUTE));
                 String taskNote = cursor.getString(cursor.getColumnIndex(DatabaseHelper.CLASS_NOTE));
                 String endTime = cursor.getString(cursor.getColumnIndex(DatabaseHelper.END_TIME));
+                String endTime2 = cursor.getString(cursor.getColumnIndex(DatabaseHelper.END_TIME2));
 
-                ClassData classData = new ClassData(classId, taskTitle, taskInstitute, taskLocation, taskTime, endTime, taskNote, taskDate);
+                ClassData classData = new ClassData(classId, taskTitle, taskInstitute, taskLocation, taskTime, endTime, endTime2, taskNote, taskDate);
                 classesOfTheDay.add(classData);
 
                 cursor.moveToNext();
@@ -269,8 +271,9 @@ public class DatabaseManager {
                 String taskInstitute = cursor.getString(cursor.getColumnIndex(DatabaseHelper.CLASS_INSTITUTE));
                 String taskNote = cursor.getString(cursor.getColumnIndex(DatabaseHelper.CLASS_NOTE));
                 String endTime = cursor.getString(cursor.getColumnIndex(DatabaseHelper.END_TIME));
+                String endTime2 = cursor.getString(cursor.getColumnIndex(DatabaseHelper.END_TIME2));
 
-                ClassData classData = new ClassData(classId, taskTitle, taskInstitute, taskLocation, taskTime, endTime, taskNote, taskDate);
+                ClassData classData = new ClassData(classId, taskTitle, taskInstitute, taskLocation, taskTime, endTime, endTime2, taskNote, taskDate);
                 classesOfTheDay.add(classData);
 
                 cursor.moveToNext();

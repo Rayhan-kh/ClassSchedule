@@ -28,6 +28,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String CLASS_DAYS="class_days";
     public static final String START_TIME ="start_time";
     public static final String END_TIME ="end_time";
+    public static final String END_TIME2 ="end_time2";
     public static final String CLASS_INSTITUTE="class_institute";
     public static final String CLASS_NOTE="class_note";
 
@@ -35,43 +36,43 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             " ( " + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             +  CLASS_TITLE + " TEXT NOT NULL, " + CLASS_LOCATION + " TEXT, "
             + CLASS_DAYS + " TEXT, " + CLASS_INSTITUTE + " TEXT, "
-            + START_TIME + " TEXT, " + END_TIME + " TEXT, " + CLASS_NOTE + " TEXT )";
+            + START_TIME + " TEXT, " + END_TIME + " TEXT, "+ END_TIME2 + " TEXT, " + CLASS_NOTE + " TEXT )";
 
     private static final String CREATE_USER_TABLE_SUN = " CREATE TABLE " + TABLE_SUN +
             " ( " + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             +  CLASS_TITLE + " TEXT NOT NULL, " + CLASS_LOCATION + " TEXT, "
             + CLASS_DAYS + " TEXT, " + CLASS_INSTITUTE + " TEXT, "
-            + START_TIME + " TEXT, " + END_TIME + " TEXT, " + CLASS_NOTE + " TEXT )";
+            + START_TIME + " TEXT, " + END_TIME + " TEXT, "+ END_TIME2 + " TEXT, " + CLASS_NOTE + " TEXT )";
 
     private static final String CREATE_USER_TABLE_MON = " CREATE TABLE " + TABLE_MON +
             " ( " + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             +  CLASS_TITLE + " TEXT NOT NULL, " + CLASS_LOCATION + " TEXT, "
             + CLASS_DAYS + " TEXT, " + CLASS_INSTITUTE + " TEXT, "
-            + START_TIME + " TEXT, " + END_TIME + " TEXT, " + CLASS_NOTE + " TEXT )";
+            + START_TIME + " TEXT, " + END_TIME + " TEXT, "+ END_TIME2 + " TEXT, " + CLASS_NOTE + " TEXT )";
 
     private static final String CREATE_USER_TABLE_TUE = " CREATE TABLE " + TABLE_TUE +
             " ( " + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             +  CLASS_TITLE + " TEXT NOT NULL, " + CLASS_LOCATION + " TEXT, "
             + CLASS_DAYS + " TEXT, " + CLASS_INSTITUTE + " TEXT, "
-            + START_TIME + " TEXT, " + END_TIME + " TEXT, " + CLASS_NOTE + " TEXT )";
+            + START_TIME + " TEXT, " + END_TIME + " TEXT, "+ END_TIME2 + " TEXT, " + CLASS_NOTE + " TEXT )";
 
     private static final String CREATE_USER_TABLE_WED = " CREATE TABLE " + TABLE_WED +
             " ( " + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             +  CLASS_TITLE + " TEXT NOT NULL, " + CLASS_LOCATION + " TEXT, "
             + CLASS_DAYS + " TEXT, " + CLASS_INSTITUTE + " TEXT, "
-            + START_TIME + " TEXT, " + END_TIME + " TEXT, " + CLASS_NOTE + " TEXT )";
+            + START_TIME + " TEXT, " + END_TIME + " TEXT, "+ END_TIME2 + " TEXT, " + CLASS_NOTE + " TEXT )";
 
     private static final String CREATE_USER_TABLE_THR = " CREATE TABLE " + TABLE_THR +
             " ( " + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             +  CLASS_TITLE + " TEXT NOT NULL, " + CLASS_LOCATION + " TEXT, "
             + CLASS_DAYS + " TEXT, " + CLASS_INSTITUTE + " TEXT, "
-            + START_TIME + " TEXT, " + END_TIME + " TEXT, " + CLASS_NOTE + " TEXT )";
+            + START_TIME + " TEXT, " + END_TIME + " TEXT, "+ END_TIME2 + " TEXT, " + CLASS_NOTE + " TEXT )";
 
     private static final String CREATE_USER_TABLE_FRI = " CREATE TABLE " + TABLE_FRI +
             " ( " + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             +  CLASS_TITLE + " TEXT NOT NULL, " + CLASS_LOCATION + " TEXT, "
             + CLASS_DAYS + " TEXT, " + CLASS_INSTITUTE + " TEXT, "
-            + START_TIME + " TEXT, " + END_TIME + " TEXT, " + CLASS_NOTE + " TEXT )";
+            + START_TIME + " TEXT, " + END_TIME + " TEXT, "+ END_TIME2 + " TEXT, " + CLASS_NOTE + " TEXT )";
 
 
     public DatabaseHelper(Context context) {

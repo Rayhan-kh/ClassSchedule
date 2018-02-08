@@ -15,26 +15,29 @@ public class ClassData {
     private String classNotes;
     private String classDays;
     private String classEndTime;
+    private String classEndTime2;
 
 
 
-    public ClassData(int classId, String classTitle, String classInstitute, String classLocation, String classStartTime, String classEndTime, String classNotes,String classDays) {
+    public ClassData(int classId, String classTitle, String classInstitute, String classLocation, String classStartTime, String classEndTime, String classEndTime2, String classNotes,String classDays) {
         this.classId = classId;
         this.classTitle = classTitle;
         this.classInstitute = classInstitute;
         this.classLocation = classLocation;
         this.classStartTime = classStartTime;
         this.classEndTime = classEndTime;
+        this.classEndTime2 = classEndTime2;
         this.classDays = classDays;
         this.classNotes = classNotes;
     }
-    public ClassData( String classTitle, String classInstitute, String classLocation, String classStartTime, String classEndTime, String classNotes,String classDays) {
+    public ClassData( String classTitle, String classInstitute, String classLocation, String classStartTime, String classEndTime, String classEndTime2, String classNotes,String classDays) {
 
         this.classTitle = classTitle;
         this.classInstitute = classInstitute;
         this.classLocation = classLocation;
         this.classStartTime = classStartTime;
         this.classEndTime = classEndTime;
+        this.classEndTime2 = classEndTime2;
         this.classDays = classDays;
         this.classNotes = classNotes;
     }
@@ -102,16 +105,11 @@ public class ClassData {
         this.classStartTime = classStartTime;
     }
 
-    @Override
-    public String toString() {
-        return "ClassData{" +
-                "classDays='" + classDays + '\'' +
-                ", classId=" + classId +
-                ", classTitle='" + classTitle + '\'' +
-                ", classInstitute='" + classInstitute + '\'' +
-                ", classLocation='" + classLocation + '\'' +
-                ", classStartTime='" + classStartTime + '\'' +
-                ", classNotes='" + classNotes + '\'' +
-                '}';
+    public String getClassEndTime2() {
+        return classEndTime2;
+    }
+
+    public void setClassEndTime2(String classEndTime2) {
+        this.classEndTime2 = classEndTime2;
     }
 }

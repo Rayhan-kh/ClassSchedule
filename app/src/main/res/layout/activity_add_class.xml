@@ -20,7 +20,7 @@
             android:id="@+id/etTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Title"
+            android:hint="Brand Name"
             android:inputType="textCapSentences"
             android:textColor="@color/colorBlack" />
 
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="Institute"
+            android:hint="Generic Name"
             android:inputType="textCapSentences"
             android:textColor="@color/colorBlack" />
         <EditText
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="Room No."
+            android:hint="Dose"
             android:inputType="textCapSentences"
             android:textColor="@color/colorBlack" />
 
@@ -49,11 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:orientation="horizontal"
-            android:weightSum="2">
-
-
-
-
+            android:weightSum="3">
             <EditText
                 android:layout_marginLeft="10dp"
                 android:id="@+id/etStrartTime"
@@ -62,11 +58,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:focusable="false"
-                android:hint="Strat Time"
+                android:hint="Time 1"
                 android:onClick="pickTime"
                 android:gravity="center_horizontal"
                 android:textColor="@color/colorBlack" />
             <EditText
+
                 android:layout_marginLeft="10dp"
                 android:id="@+id/etEndTime"
                 android:layout_width="0dp"
@@ -74,8 +71,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:focusable="false"
-                android:hint="End Time"
+                android:hint="Time 2"
                 android:onClick="pickEndTime"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorBlack" />
+            <EditText
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/etEndTime2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:focusable="false"
+                android:hint="Time 3"
+                android:onClick="pickEndTime2"
                 android:gravity="center_horizontal"
                 android:textColor="@color/colorBlack" />
 
@@ -100,7 +110,7 @@
             android:textSize="18sp"
             android:layout_marginTop="60dp"
             android:textColor="@color/colorGray"
-            android:text="Class Days"/>
+            android:text="Days of the Week"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
