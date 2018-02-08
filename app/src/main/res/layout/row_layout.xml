@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/tvEndTime"
         android:layout_below="@id/tvTime"
-        android:text="10:00 AM"
+        android:text=""
         android:textColor="@color/colorGray"
         />
     <TextView
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTitle"
         android:layout_alignStart="@+id/tvTitle"
-        android:text="East West University"
+        android:text=""
         android:textColor="@color/colorGray"
         android:textSize="16sp"/>
 

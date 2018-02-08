@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.foxcoders.classschedule">
+    package="com.foxcoders.medialert">
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/calendar"
+        android:icon="@drawable/medialert"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/calendar_round"
+        android:roundIcon="@drawable/medialertcircle"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.foxcoders.classschedule.MainActivity">
+        <activity android:name="com.foxcoders.medialert.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,17 +17,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.foxcoders.classschedule.AddClassActivity"
-            android:parentActivityName=".MainActivity" />
+            android:name="com.foxcoders.medialert.AddClassActivity"
+            android:parentActivityName="com.foxcoders.medialert.MainActivity" />
         <activity
-            android:name="com.foxcoders.classschedule.DetailViewClass"
-            android:parentActivityName="com.foxcoders.classschedule.MainActivity" />
+            android:name="com.foxcoders.medialert.DetailViewClass"
+            android:parentActivityName="com.foxcoders.medialert.MainActivity" />
 
 
-        <receiver android:name=".AlarmHandler"
+        <receiver android:name="com.foxcoders.medialert.AlarmHandler"
             android:enabled="true"
             android:exported="true"/>
-        <receiver android:name=".AlarmReceiver"
+        <receiver android:name="com.foxcoders.medialert.AlarmReceiver"
             android:enabled="true"
             android:exported="true"/>
     </application>
