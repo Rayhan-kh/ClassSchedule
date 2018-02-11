@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Institute"
+            android:text="Generic Name"
             android:textColor="@color/colorLightAccent" />
 
         <TextView
@@ -26,7 +26,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="East West University"
             android:textColor="@color/colorWhite"
             android:textSize="18sp" />
 
@@ -36,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="Room Number"
+            android:text="Dose"
             android:textColor="@color/colorLightAccent" />
 
 
@@ -45,7 +44,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="Room 601"
             android:textColor="@color/colorWhite"
             android:textSize="18sp" />
 
@@ -61,7 +59,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="10:10 AM - 11:40 AM"
             android:textColor="@color/colorWhite"
             android:textSize="20sp"
             android:textStyle="bold"/>
@@ -78,7 +75,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="Sunday, Tuesday"
             android:textColor="@color/colorWhite"
             android:textSize="18sp" />
 
@@ -94,7 +90,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="Mochwalar Class. Miss dile khobor ache!"
             android:textColor="@color/colorWhite"
             android:textSize="18sp" />
 

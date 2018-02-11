@@ -2,32 +2,41 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="08:00 AM"
-        android:textColor="@color/colorGray"/>
+        android:textColor="@color/colorGray" />
+
     <TextView
-        android:layout_alignStart="@+id/tvTime"
+        android:id="@+id/tvEndTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvEndTime"
+        android:layout_alignStart="@+id/tvTime"
         android:layout_below="@id/tvTime"
         android:text=""
-        android:textColor="@color/colorGray"
-        />
+        android:textColor="@color/colorGray" />
+
+    <TextView
+        android:id="@+id/tvTime2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvTime"
+        android:layout_below="@id/tvEndTime"
+        android:textColor="@color/colorGray" />
+
     <TextView
         android:id="@+id/div"
         android:layout_width="1dp"
-        android:layout_height="35dp"
-        android:layout_toRightOf="@+id/tvTime"
-        android:background="@color/colorAccent"
+        android:layout_height="53dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"/>
+        android:layout_marginRight="24dp"
+        android:layout_toRightOf="@+id/tvTime"
+        android:background="@color/colorAccent" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -35,18 +44,28 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/div"
         android:text="Title"
-        android:textSize="17sp"
-        android:textColor="@color/colorBlack"/>
+        android:textColor="@color/colorBlack"
+        android:textSize="17sp" />
 
     <TextView
         android:id="@+id/tvInstitute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTitle"
         android:layout_alignStart="@+id/tvTitle"
+        android:layout_below="@+id/tvTitle"
         android:text=""
         android:textColor="@color/colorGray"
-        android:textSize="16sp"/>
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvTitle"
+        android:layout_below="@+id/tvInstitute"
+        android:text=""
+        android:textColor="@color/colorGray"
+        android:textSize="16sp" />
 
 
 </RelativeLayout>

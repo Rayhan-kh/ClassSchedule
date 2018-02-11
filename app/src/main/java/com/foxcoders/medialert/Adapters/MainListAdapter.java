@@ -57,15 +57,24 @@ public class MainListAdapter extends BaseAdapter {
         mHolder.tvTime = (TextView) convertView.findViewById(R.id.tvTime);
         mHolder.tvEndTime = (TextView) convertView.findViewById(R.id.tvEndTime);
         mHolder.tvInstitute = (TextView) convertView.findViewById(R.id.tvInstitute);
+        mHolder.tvTime2 = convertView.findViewById(R.id.tvTime2);
+        mHolder.tvNote = convertView.findViewById(R.id.tvNotes);
 
 
         mHolder.tvTitle.setText(classDatas.get(i).getClassTitle());
         mHolder.tvInstitute.setText(classDatas.get(i).getClassInstitute());
+        mHolder.tvNote.setText(classDatas.get(i).getClassNotes());
 
         mHolder.tvTime.setText(getTimeInString(classDatas.get(i).getClassStartTime()));
         if (classDatas.get(i).getClassEndTime() != null) {
             mHolder.tvEndTime.setText(getTimeInString(classDatas.get(i).getClassEndTime()));
+        } else {
+            mHolder.tvEndTime.setText("");
         }
+
+        if (classDatas.get(i).getClassEndTime2() != null) {
+            mHolder.tvTime2.setText(getTimeInString(classDatas.get(i).getClassEndTime()));
+        } else mHolder.tvTime2.setText("");
 
 
         convertView.setTag(mHolder);
@@ -88,6 +97,8 @@ public class MainListAdapter extends BaseAdapter {
         TextView tvInstitute;
         TextView tvTime;
         TextView tvEndTime;
+        TextView tvTime2;
+        TextView tvNote;
 
     }
 }
